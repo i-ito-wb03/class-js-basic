@@ -15,5 +15,5 @@ window.addEventListener('scroll', () => {
 
 // スクロールしたとき
 window.addEventListener('load', () => {
-    document.body.style.backgroundImage = `linear-gradient(${window.scrolly}deg, #ff9a9e, #fad0c4)`;
+    document.body.style.backgroundImage = `linear-gradient(${window.scrollY}deg, #ff9a9e, #fad0c4)`;
 });
