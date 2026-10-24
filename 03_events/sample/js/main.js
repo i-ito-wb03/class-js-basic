@@ -22,3 +22,13 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
     document.body.style.backgroundImage = `linear-gradient(${window.scrollY}deg, #ff9a9e, #fad0c4)`;
 });
+
+const windowWidthText = document.getElementById('window-width');
+
+// 画像を開いた瞬間の幅を表示
+windowWidthText.textContent = window.innerWidth;
+
+// ウィンドウがリサイズされるたびに数値を更新
+window.addEventListener('resize', () => {
+    windowWidthText.textContent = window.innerWidth;
+});
