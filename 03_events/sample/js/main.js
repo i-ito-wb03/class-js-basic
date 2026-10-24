@@ -12,3 +12,8 @@ window.addEventListener('scroll', () => {
     // スクロールされたピクセル数（px）をそのままグラデーションの角度（deg）に変換
     document.body.style.backgroundImage = `linear-gradient(${window.scrollY}deg, #ff9a9e, #fad0c4)`;
 });
+
+// スクロールしたとき
+window.addEventListener('load', () => {
+    document.body.style.backgroundImage = `linear-gradient(${window.scrolly}deg, #ff9a9e, #fad0c4)`;
+});
