@@ -14,6 +14,11 @@ window.addEventListener('scroll', () => {
 });
 
 // スクロールしたとき
+window.addEventListener('scroll', () => {
+    document.body.style.backgroundImage = `linear-gradient(${window.scrollY}deg, #ff9a9e, #fad0c4)`;
+});
+
+// ページの読み込みが完了したとき（リロード時にも適用）
 window.addEventListener('load', () => {
     document.body.style.backgroundImage = `linear-gradient(${window.scrollY}deg, #ff9a9e, #fad0c4)`;
 });
