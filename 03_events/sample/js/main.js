@@ -9,6 +9,6 @@ btn.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-    // スクロールされたピクセル数（px）をそのまま回転角度（deg）に変換
-    btn.style.transform = `rotate(${window.scrollY}deg)`;
+    // スクロールされたピクセル数（px）をそのままグラデーションの角度（deg）に変換
+    document.body.style.backgroundImage = `linear-gradient(${window.scrollY}deg, #ff9a9e, #fad0c4)`;
 });
