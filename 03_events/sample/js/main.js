@@ -24,9 +24,11 @@ window.addEventListener('load', () => {
 });
 
 const windowWidthText = document.getElementById('window-width');
+const windowHeightText = document.getElementById('window-height');
 
-// 画像を開いた瞬間の幅を表示
+// 画像を開いた瞬間の幅と高さを表示
 windowWidthText.textContent = window.innerWidth;
+windowHeightText.textContent = window.innerHeight;
 
 // ウィンドウがリサイズされるたびに数値を更新
 window.addEventListener('resize', () => {
