@@ -3,6 +3,14 @@ console.log('success!');
 const btn = document.getElementById('btn');
 const mainTitle = document.getElementById('main-title');
 
+// 画面を開いた瞬間の文字サイズを設定（画面幅の1/25）
+mainTitle.style.fontSize = `${window.innerWidth / 25}px`;
+
+// リサイズされるたびに文字サイズを更新
+window.addEventListener('resize', () => {
+    mainTitle.style.fontSize = `${window.innerWidth / 25}px`;
+});
+
 btn.addEventListener('click', () => {
     mainTitle.textContent = 'ボタンがクリックされました！';
     mainTitle.style.color = '#e67e22';
