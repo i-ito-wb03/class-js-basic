@@ -25,6 +25,12 @@ body {
     cursor: pointer;
 }
 
+/* 通常状態（CSSに書いておく） */
+.btn {
+    background-color: #ffffff;
+    color: #333;
+}
+
 .btn:hover {
     opacity: 0.8;
 }
