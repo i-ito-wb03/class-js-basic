@@ -33,4 +33,5 @@ windowHeightText.textContent = window.innerHeight;
 // ウィンドウがリサイズされるたびに数値を更新
 window.addEventListener('resize', () => {
     windowWidthText.textContent = window.innerWidth;
+    windowHeightText.textContent = window.innerHeight;
 });
