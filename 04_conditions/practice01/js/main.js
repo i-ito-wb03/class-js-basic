@@ -43,3 +43,22 @@ btn.addEventListener('click', () => {
         message.style.color = '#333333';
     }
 });
+
+const pageTop = document.getElementById('page-top');
+
+window.addEventListener('scroll', () => {
+    // スクロール量が300px以上ならボタンを表示、それ未満なら非表示
+    if (window.scrollY >= 300) {
+        pageTop.classList.add('is-active');
+    } else {
+        pageTop.classList.remove('is-active');
+    }
+});
+
+// （おまけ）ボタンをクリックしたらスムーズに一番上へ戻る
+pageTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
