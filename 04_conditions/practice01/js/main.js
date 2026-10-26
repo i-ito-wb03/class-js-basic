@@ -5,3 +5,6 @@ const score = 85;
 if (score >= 80) {
     console.log('合格です！おめでとうございます！');
 }
+
+const age = 22;
+const hasLicense = true;
