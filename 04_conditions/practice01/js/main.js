@@ -18,20 +18,28 @@ if (age >= 18 && hasLicense === true) {
 
 const btn = document.getElementById('btn');
 const message = document.getElementById('message');
+const countDisplay = document.getElementById('count');
+
+// ★重要：クイック数を記録する変数はイベントリスナーの「外」で宣言する！
+let count = 0;
+
+message.textContent = 'ボタンをクリックしてカウントを増やそう！';
 
 btn.addEventListener('click', () => {
-    // テスト用のデータ（数値をいろいろ変更してテストしてみましょう）
-    const isMember = true;
-    const total = 6000;
+    // 1. カウントを1増やす
+    count++;
+    countDisplay.textContent = count;
 
-    if (isMember && total >= 10000) {
-        message.textContent = '【送料無料＋20%OFF】プレミアム会員特典が適用されました！';
-        message.style.color = '#0066cc';
-    } else if (isMember && total >= 5000) {
-        message.textContent = '【送料無料】会員特別割引が適用されました！';
-        message.style.color = '#27ae60';
-    } else {
-        message.textContent = '通常送料がかかります（会員登録＋5,000円以上で送料無料）。';
+    // 2. カウント数に応じてメッセージを分岐
+    if (count >= 30) {
+        message.textContent = '30回達成！ゲームクリアです！';
         message.style.color = '#e74c3c';
+    } else if (count % 10 === 0) {
+        // 10で割った余りが 0 = 10の倍数（10回、20回のとき）
+        message.textContent = '${count}回達成！あと少し！';
+        message.style.color = '#0066cc';
+    } else {
+        message.textContent = 'ボタンをクリックしてカウントを増やそう';
+        message.style.color = '#333333';
     }
 });
