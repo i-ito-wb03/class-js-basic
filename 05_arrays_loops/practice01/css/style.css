@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body {
+    padding: 24px;
+    font-family: sans-serif;
+    max-width: 600px;
+}
+
+section {
+    margin-top: 32px;
+    color: #06c;
+}
+
+#step-indicator {
+    font-weight: bold;
+    color: #06c;
+}
