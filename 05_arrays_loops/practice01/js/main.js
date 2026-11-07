@@ -10,3 +10,10 @@ const steps = [
     '入力内容を確認し、利用規約に同意してください。',
     '登録が完了しました！サービスをお楽しみください🎉',
 ];
+
+// 現在表示しているインデックス番号（0からスタート）
+let currentIndex = 0;
+
+// 初期表示の反映
+stepIndicator.textContent = `STEP ${currentIndex + 1} / ${steps.length}`;
+stepMessage.textContent = steps[currentIndex];
