@@ -55,3 +55,18 @@ addBtn.addEventListener('click', () => {
         console.log(steps); // 配列にデータが増えたことを確認
     }
 });
+
+const menuList = document.getElementById('menu-list');
+
+const menus = ['ホーム', 'サービス紹介', '制作実績', '会社概要', 'お問い合わせ'];
+
+// 1. 生成するHTML文字列を貯めるための箱（最初は空っぽ）
+let listHtml = '';
+
+// 2. 配列の要素数だけループして <li> タグを繋げていく
+for (let i = 0; i < menus.length; i++) {
+    listHtml += `<li>${menus[i]}</li>`;
+}
+
+// 3. 完成したHTML文字列を ul 要素に流し込む
+menuList.innerHTML = listHtml;
