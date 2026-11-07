@@ -32,3 +32,26 @@ nextBtn.addEventListener('click', () => {
     stepIndicator.textContent = `STEP ${currentIndex + 1} / ${steps.length}`;
     stepMessage.textContent = steps[currentIndex];
 });
+
+// 入力フォームの要素を取得
+const newStepInput = document.getElementById('new-step-input');
+const addBtn = document.getElementById('add-btn');
+
+// 「ステップを追加」ボタンをクリックしたとき
+addBtn.addEventListener('click', () => {
+    const newStepText = newStepInput.value;
+
+    // 入力欄が空でなければ配列に追加
+    if (newStepText !== '') {
+        // 1. 配列の末尾に新しいメッセージを追加
+        steps.push(newStepText);
+
+        // 2. ステップ表示の分母（steps.length）を更新
+        stepIndicator.textContent = `STEP ${currentIndex + 1} / ${steps.length}`;
+
+        // 3.入力欄をクリア
+        newStepInput.value = '';
+
+        console.log(steps); // 配列にデータが増えたことを確認
+    }
+});
