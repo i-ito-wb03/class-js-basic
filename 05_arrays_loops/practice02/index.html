@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_複数要素の一括操作</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <h1>複数要素の取得と一括操作</h1>
+
+    <!-- 1. 外部リンクの一括設定エリア -->
+    <section>
+        <h2>1. 外部サイトへのリンク一括設定</h2>
+        <ul class="link-list">
+            <li><a href="index.html">トップページ（サイト内リンク）</a></li>
+            <li><a href="https://www.google.com">Google検索（外部サイト）</a></li>
+            <li><a href="about.html">会社概要（サイト内リンク）</a></li>
+            <li><a href="https://computer.trident.ac.jp">トライデント公式サイト（外部サイト）</a></li>
+            <li><a href="https://developer.mozilla.org/ja/">MDM Web Docs（外部サイト）</a></li>
+        </ul>
+    </section>
+
+    <!-- メニュー一覧自動生成でで使用：メニューリスト自動生成エリア -->
+    <section>
+        <h2>メニュー一覧（自動生成）</h2>
+        <ul id="menu-list"></ul>
+    </section>
+</body>
+</html>
