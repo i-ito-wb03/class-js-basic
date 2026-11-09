@@ -15,3 +15,5 @@ for (let i = 0; i < externalLinks.length; i++) {
     // 2. リンクテキストの末尾にアイコン記号を追加
     externalLinks[i].textContent += ' ↗︎';
 }
+
+const colorCodes = ['#e74c3c', '#27ae60', '#2980b9', '#8e44ad'];
