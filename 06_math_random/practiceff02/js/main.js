@@ -12,3 +12,8 @@ while (dice !== 6) {
 }
 
 console.log('6が出たので終了しました');
+
+const drawUntilBtn = document.getElementById('draw-until-btn');
+const drawLog = document.getElementById('draw-log');
+
+const omikujiItems = ['大吉', '中吉', '小吉', '吉', '凶'];
